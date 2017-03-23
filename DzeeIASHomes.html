@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+	      
+	    
+	    <script type="text/javascript" src="C:\Tools\eclipse\workspace\DzeeSolution\DzeeSoIAS.js" ></script>
+    	
+    	<link rel="stylesheet" type="text/css" href="C:\Tools\eclipse\workspace\DzeeSolution\DzeeSoIAS.css">
+    	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script> 
+		
+		<link rel="stylesheet" href="C:\Users\natasha\Desktop\DzeeSolutions\font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.min.css">
+	
+	<title>DzeeIASHome</title>
+		
+
+</head>
+<body onload="startTime()">
+
+	<nav class="navbar navbar-default navbar-static-top"style="background-color:#ffffff;">
+		<div class="container ">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only" >Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			
+		
+				
+				<div class="col-md-4 col-xs-4 col-logo text-center" >
+					<a href="file:///C:/Tools/eclipse/workspace/DzeeSolution/DzeeIASHomes.html">
+						<strong><img src="C:\Users\natasha\Desktop\DzeeSolutions\image\dzeelogo.png"></strong>
+					</a>
+				</div>
+				<div class="col-md-8 col-xs-8">
+					<h1  class="IASh1"><span style="padding-right:70px;"><strong>Dzee Internal Admin System</strong></span>
+					<a href=#><span class="glyphicon glyphicon-cog glyphsize"></span></a>
+					<a href=#><span class="glyphicon glyphicon-home"></span></a>
+					<a href=#><span class="glyphicon glyphicon-off"></span></a></h1>
+				</div>
+			</div>
+		
+	</nav>
+	<div class="container text-center" >
+		<div class="row ">
+			<div class="col-md-8">
+				<b >Login ID:</b>
+				<input value="mgerlibroker@hrsolve.com" style="border:none;color:blue;font-weight:bold;font-style: italic;background-color: rgba(245, 245, 245, 1);" size="50" readonly>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="col_2 " id="inputDate" style="font-family:sans-serif;font-weight:700;font-style: italic;color:#63656a;font-size:14px;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="container text-center main1" >
+		<section class="section-IAS1 button-height ">
+			<div class="button-div button-div-1">
+				<button class="btn btn-primary btn-responsive btn-lg button-IAS" onclick="createBroker()">Create Broker</button>					
+			</div>
+		
+			<div class="row input-text form-group">
+				<div class="col-md-4 text-right text">Broker ID:</div>
+				<div class="col-md-8 text-center "><input type="text" size="35" id="BrokerID" class="form-control input-box" ng-model="BrokerId" value="Please enter a valid Broker Id" ></div>
+			</div>
+			<div class="button-div " >
+				<button class="btn btn-primary btn-responsive btn-lg button-IAS " onclick="changePassword()">Setting Broker Password</button>					
+			</div>
+			<div class="button-div">
+				<button class="btn btn-primary btn-lg btn-responsive button-IAS" onclick="uploadEmployee()">Upload Employee Information</button>					
+			</div>
+			<!-- <div class="button-div">
+				<button class="btn btn-primary btn-lg button-IAS" onclick="sampleButton(BrokerId)">Sample passing value button</button>					
+			</div>  -->
+				
+			<div class="note">
+				<b>Need help? Don't hesitate to Contact Us!
+				<br>303-305-8892&nbsp;&nbsp;info@dzeesolutions.com
+				</b>
+			</div>
+		</section>
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-bottom"style="background-color:#6f7c7d;">
+		<div class="container footer">
+			<div class="row"> 
+			  <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+			   Copyright © 
+			   <a id="footerDzeeSolutionLink" href="http://www.dzeesolutions.com/" target="_blank">DZee Solutions</a>.
+			    All rights reserved.
+		      </div> 
+		     <div class="col-sm-2 col-xs-12 text-right">
+		      <a  class="fa fa-twitter footer-icon"   id="footerTwitterIcon" href="http://www.twitter.com/dzeeplan" target="_blank"> </a>
+		       <a class="fa fa-facebook footer-icon" aria-hidden="true" id="footerFaceBookIcon" href="http://www.facebook.com/dzeesolutions" target="_blank"> </a>
+	        </div> 
+    	 </div>
+	  </div>
+	</nav>
+	
+
+</body>
+</html>

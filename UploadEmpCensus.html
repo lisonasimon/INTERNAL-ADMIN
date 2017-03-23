@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>UploadEmployeeCensus</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+	      
+	    <!--  <script type="text/javascript" src="C:\Tools\eclipse\workspace\DzeeHealth\DzeeIAS.js" ></script> -->
+	    <script type="text/javascript" src="C:\Tools\eclipse\workspace\DzeeSolution\DzeeSoIAS.js" ></script>
+    	
+    	<link rel="stylesheet" type="text/css" href="C:\Tools\eclipse\workspace\DzeeSolution\DzeeSoIAS.css">
+    	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script> 
+		
+		<link rel="stylesheet" href="C:\Users\natasha\Desktop\DzeeSolutions\font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.min.css">
+</head>
+<body onload="startTime()" style="min-height:700px;">
+
+	<nav class="navbar navbar-default navbar-static-top"style="background-color:#ffffff;">
+		<div class="container >
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only" >Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			
+		
+				
+				<div class="col-md-4 col-xs-4 col-logo text-center" >
+					<a href="file:///C:/Tools/eclipse/workspace/DzeeSolution/DzeeIASHomes.html">
+						<strong><img src="C:\Users\natasha\Desktop\DzeeSolutions\image\dzeelogo.png"></strong>
+					</a>
+				</div>
+				<div class="col-md-8 col-xs-8">
+					<h1  class="IASh1"><span style="padding-right:70px;"><strong>Dzee Internal Admin System</strong></span>
+					<a href=#><span class="glyphicon glyphicon-cog"></span></a>
+					<a href=#><span class="glyphicon glyphicon-home"></span></a>
+					<a href=#><span class="glyphicon glyphicon-off"></span></a></h1>
+				</div>
+			</div>
+		
+	</nav>
+	<div class="container text-center " >
+		<div class="row ">
+			<div class="col-md-8">
+				<b >Login ID:</b>
+				<input value="mgerlibroker@hrsolve.com" style="border:none;color:blue;font-weight:bold;font-style: italic;background-color: rgba(245, 245, 245, 1);" size="50" readonly>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="col_2 " id="inputDate" style="font-family:sans-serif;font-weight:700;font-style: italic;color:#63656a;font-size:14px;"></div>
+			</div>
+		</div>
+	</div>
+	<div class=" container main1 ">
+	<form action="file:///C:/Tools/eclipse/workspace/DzeeSolution/DzeeIASBroker.html" id="UploadEmpForm" method="post">
+	<div class="padd">
+	<div class="EmpMain ">
+		
+			<header class="head1" >
+						<h2 class="h1">Upload Employee Data</h2>
+			</header>
+		<div class="BrokerMain">
+			<div class="row text-center padd">
+				<span class="text1" >Excel or .csv files only.</span>
+				<span class="text1">
+				 <a href="C:\Users\natasha\Desktop\DzeeSolutions\downloads\sample.xlsx" target='_self'>  Click</a> 
+				 here for Sample Format</span>
+				 <span>
+					<button class="Buttonemppage" id="openExcel" type="button" onclick="openExcel1()">	
+						<span style="color:#000000!important;" class="glyphicon glyphicon-folder-open" ></span>
+						<span >    Open</span>
+					</button>
+				</span>
+				<span>
+					<button class="Buttonemppage" type="button" >	
+						<span style="color:#000000!important;" class="glyphicon glyphicon-envelope " ></span>
+						<span  >  E-mail</span>
+					</button>
+				</span>					
+			</div>
+			<div class="row text-center  ">
+			<div class="input-group">
+			  <span class="input-group-btn">
+			    <span class="btn btn-primary" style="background:#a2a9ae;color:#000000;border: 1px solid #c8c8c8;" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
+			    <input name="uploaded_file"  id="fileinput" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file">
+			  </span>
+			  <span class="form-control"></span>
+			</div>
+			</div>
+			<div  class="row text-center padd">
+				<span>
+					<button class="Buttonemppage"  type="button"  onclick="Back();" >
+					
+					<span style="color:#000000!important;">Back</span></button>
+				</span>
+				<span>
+					<button class="Buttonemppage" type="submit" id="Browse"  value="Upload" onclick="check()">
+					
+					<span style="color:#000000!important;">Upload</span></button>
+					
+				</span>
+				<span>
+					<button class="Buttonemppage"  type="reset" onclick="cancel();">
+					
+					<span style="color:#000000!important;">Cancel</span></button>
+				</span>
+				</div>
+				
+			</div>
+			<!-- <div class="progress progress-popup progress-striped active myProgress" id="myProgress">
+		        <div class="progress-bar progress-bar-success myBar" id="myBar"></div>
+		     </div> -->
+
+												
+	</div>	
+	</div>
+	</form>
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-bottom"style="background-color:#6f7c7d;">
+		<div class="container footer">
+			<div class="row"> 
+			  <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+			   Copyright © 
+			   <a id="footerDzeeSolutionLink" href="http://www.dzeesolutions.com/" target="_blank">DZee Solutions</a>.
+			    All rights reserved.
+		      </div> 
+		     <div class="col-sm-2 col-xs-12 text-right">
+		      <a  class="fa fa-twitter footer-icon"   id="footerTwitterIcon" href="http://www.twitter.com/dzeeplan" target="_blank"> </a>
+		       <a class="fa fa-facebook footer-icon" aria-hidden="true" id="footerFaceBookIcon" href="http://www.facebook.com/dzeesolutions" target="_blank"> </a>
+	        </div> 
+    	 </div>
+	  </div>
+	</nav>
+
+</body>
+</html>
