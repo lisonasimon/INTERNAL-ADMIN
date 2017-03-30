@@ -63,25 +63,30 @@
 		<header class="head">
 						<h2 class="h2">Employer Administration</h2>
 		</header>
-		 <div class="row combo">
-			 <select class="select" id="dropdown" name="dropdown"  ><span class="select-opener"></span>
-                   <option class="select-text" value="--Select an Employer Group--" selected="selected"> --Select an Employer Group-- </option>
-                   <option class="select-text" value="COLORADO_CONNECT">COLORADO_CONNECT </option>
-                   <option class="select-text" value="CORHIO">CORHIO </option>
-                   <option class="select-text" value="Employer-One">Employer-One </option>
-                   <option class="select-text" value="Employer-Two">Employer-Two </option>
-                   <option class="select-text" value="MAXWELL">MAXWELL </option>
-                   
-	          </select>
-	     </div> 
-	     <div class="BrokerMain">
+		<div class="BrokerMain"> 
+		<div class="padd">
+		<div class="btn-group" >
+		    <button type="button" class="btn btn-default btn-lg dropdownstyle" >--Select an Employer Group--</button>
+		    <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-lg caretstyle" ><span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			        <li><a href="#">COLORADO_CONNECT</a></li>
+				    <li><a href="#">CORHIO</a></li>
+				    <li><a href="#">Employer-One</a></li>
+				    <li><a href="#">Employer-Two</a></li>
+				    <li><a href="#">MAXWELL</a></li>
+			    </ul>
+		</div>
+		</div>
+		
+		
+	     <!-- <div class="BrokerMain">
 		     <div class="row input-text form-group  ">
 		     		
 					<div style="margin-left:15%;">
 						<input type="text"  id="BrokerID" class="form-control input-box well" ng-model="BrokerId" value="Broker Id " >
 					</div>
 					
-			</div>
+			</div>-->
 			
 			
 			<div class="table-responsive" style="box-shadow: 0px 7px 16px rgba(0,0,0,0.2);">
@@ -154,6 +159,7 @@
 					
 				
 		</div>
+		
 	</div>
 	
 	<nav class="navbar navbar-default navbar-fixed-bottom"style="background-color:#6f7c7d;">
